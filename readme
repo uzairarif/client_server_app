@@ -1,0 +1,26 @@
+Things to implement in SP Project
+
+Server
+
+	Connect Server with client
+	Server recieves request from client
+	Server processes the request
+	Server sends the request status back to client
+	Server can list the process from all clients 
+	Server can list the process initiated from a single clients (later)
+	Server can list all the completed/terminated requests (later)
+	Server handles multi clients at a time
+
+Client
+	Connect Client with Server
+	Client sends multiple request to server 
+	Client recieves request status after completion
+	Client will have the result output of the request
+	Client requests include:
+		1) Add, run, multiply, divide
+		2) List running process
+		3) List all process
+		5) List all clients (only Admin/later) 
+		6) List a single clients process (only Admin/later) 
+	
+
