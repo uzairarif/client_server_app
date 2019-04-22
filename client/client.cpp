@@ -1,13 +1,13 @@
 #include "create_and_connect_client.hpp"
 
-#define DATA "Half a league, half a league . . ."
 
 int main(int argc, char *argv[])
 	{
     
 	client_information cinfo;
     int temp_ret;
-    char buf[1024];
+    char read_buf[1024];
+	bool end_connection = false;
 
 	/* Create socket */
     temp_ret = createsock(&cinfo);
@@ -19,12 +19,16 @@ int main(int argc, char *argv[])
     if (temp_ret == -1){
         exit(1);
     }
-	while(1) {
-	  
-	if (write(cinfo.sock, DATA, sizeof(DATA)) < 0)
-		perror("writing on stream socket");
-	    getchar();
-	  
+	
+	
+	while(1) {  
+		
+		int read_chars = read(STDIN_FILENO,read_buf,1024);
+		if (write(cinfo.sock, read_buf, read_chars-1) < 0){
+			perror("writing on stream socket");
+		}
+
 	}
+	
 	close(cinfo.sock);
 }

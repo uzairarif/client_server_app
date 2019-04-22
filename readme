@@ -1,8 +1,12 @@
-Things to implement in SP Project
+Things to implement in Project
+
+Note: This project can only be implemented on a Linux/unix machine
+Developed on: Ubuntu 16.04
+Compiler used: g++
 
 Server
 
-	Connect Server with client
+	Accept connection request from client
 	Server recieves request from client
 	Server processes the request
 	Server sends the request status back to client
@@ -13,7 +17,7 @@ Server
 
 Client
 	Connect Client with Server
-	Client sends multiple request to server 
+	Client sends multiple request to server (Multithreading)
 	Client recieves request status after completion
 	Client will have the result output of the request
 	Client requests include:
